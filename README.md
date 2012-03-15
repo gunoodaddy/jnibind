@@ -11,10 +11,10 @@ If you have some user defined type(of typedef) in input header file, you must ad
 
 jnibind's output files are 
 
-* Bind<name>.cpp
-* Bind<name>.h
-* Bind<name>.java
-* Bind<name>_test.cpp
+* Bind\<name\>.cpp
+* Bind\<name\>.h
+* Bind\<name\>.java
+* Bind\<name\>_test.cpp
 
 you use thease file to your androind project.
 
