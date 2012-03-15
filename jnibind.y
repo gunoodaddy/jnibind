@@ -504,7 +504,7 @@ int main(int argc, char** argv) {
 	FileRead(TEMPLATE_CPP_TEST, 	template_cpp_test);
 	FileRead(TEMPLATE_JAVA, 		template_java);
 
-	std::string dateString = __TIME__;	// TODO
+	std::string dateString = __TIME__;
 	dateString += " ";
 	dateString += __DATE__;
 	std::string bindProgramName = argv[0];
