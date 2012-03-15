@@ -10,10 +10,10 @@ c structure parse tool : flex, bison
 If you have some user defined type(of typedef) in input header file, you must add your new type in jnibind.l file.
 
 jnibind's result files are 
-  * Bind<name>.cpp
-  * Bind<name>.h
-  * Bind<name>.java
-  * Bind<name>_test.cpp
+* Bind<name>.cpp
+* Bind<name>.h
+* Bind<name>.java
+* Bind<name>_test.cpp
 
 you use thease file to your androind project.
 
