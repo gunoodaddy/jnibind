@@ -7,7 +7,7 @@ typedef struct tagGT_BUDDY_DATA
 	GTOSType eOSType;                                                                                                                                         
 	BYTE nType;                                                                                                                                               
 	GTCHAR strUserID[256];      /* For Local DB Proxy Feature, MUST BE Static Character Array.  (Also equivalent to the following) */
-	GTCHAR strName[256]; 	// CPP COMMENT TEST                                                                                                                                     
+	GTCHAR strName[256]; 		// CPP COMMENT TEST                                                                                                                                     
 	GTCHAR strAlias[256];                                                                                                                                     
 	GTCHAR strTalkName[256];                                                                                                                                  
 	char *ptr;
