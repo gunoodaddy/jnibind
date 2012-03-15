@@ -1,5 +1,5 @@
 # jnibind
-jnibind generates c++ & java jni binding class for your own c structure.
+`jnibind` generates c++ & java jni binding classes for your own c structure.
 
 c language parse tool : `flex`, `bison`
 
