@@ -16,7 +16,7 @@ jnibind's output files are
 * Bind\<name\>.java
 * Bind\<name\>_test.cpp
 
-you use these file to your androind project.
+you use these files to your androind project.
 
 Also `jnibind` perform making test program and running it to verify that output files are generated correctly.
 
