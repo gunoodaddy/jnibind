@@ -493,17 +493,6 @@ int main(int argc, char** argv) {
 	const char *		TEMPLATE_JAVA 		= "./template/template.java";
 	const std::string 	PREFIX 				= "Bind";
 
-	std::string template_cpp_header;
-	std::string template_cpp_source;
-	std::string template_cpp_test;
-	std::string template_java;
-	
-	// read template files
-	FileRead(TEMPLATE_CPP_HEADER, 	template_cpp_header);
-	FileRead(TEMPLATE_CPP_SOURCE, 	template_cpp_source);
-	FileRead(TEMPLATE_CPP_TEST, 	template_cpp_test);
-	FileRead(TEMPLATE_JAVA, 		template_java);
-
 	std::string dateString = __TIME__;
 	dateString += " ";
 	dateString += __DATE__;
@@ -647,11 +636,8 @@ int main(int argc, char** argv) {
 		//printf("result => %s(%s)(%s) = %s\n", result_types_[i].c_str(), real_types_[i].c_str(), org_types_[i].c_str(), identifiers_[i].c_str());
 		//printf("name=%s, javatype=%s, capname=%s, smallname=%s\n", name.c_str(), javaType.c_str(), capName.c_str(), smallName.c_str());
 	}
-	//printf("%s\n", dummyNewTypeDeclareRegion.c_str());
-	//-----------------------------------------------------------------------------------------------
 	//-----------------------------------------------------------------------------------------------
 	//------------------------------------[ LOOP END ]-----------------------------------------------
-	//-----------------------------------------------------------------------------------------------
 	//-----------------------------------------------------------------------------------------------
 
 	// Make dummy define for unknown definitions
@@ -681,9 +667,12 @@ int main(int argc, char** argv) {
 		StringReplaceAll(temp, "$$CONVERT_DATA_FUNCTION_REGION$$", convertDataRegion);
 		convertDataRegion  = temp;
 	}
-
+	
 	// generate cpp header 
 	{
+		std::string template_cpp_header;
+		FileRead(TEMPLATE_CPP_HEADER, 	template_cpp_header);
+
 		StringReplaceAll(template_cpp_header, "$$KEH_BIND_PROGRAM$$", bindProgramName);
 		StringReplaceAll(template_cpp_header, "$$KEH_DATE$$", dateString);
 		StringReplaceAll(template_cpp_header, "$$KEH_CLASSNAME$$", className);
@@ -702,6 +691,9 @@ int main(int argc, char** argv) {
 
 	// generate cpp source
 	{
+		std::string template_cpp_source;
+		FileRead(TEMPLATE_CPP_SOURCE, 	template_cpp_source);
+
 		StringReplaceAll(template_cpp_source, "$$KEH_BIND_PROGRAM$$", bindProgramName);
 		StringReplaceAll(template_cpp_source, "$$KEH_DATE$$", dateString);
 		StringReplaceAll(template_cpp_source, "$$KEH_CLASSNAME$$", className);
@@ -714,6 +706,9 @@ int main(int argc, char** argv) {
 
 	// generate cpp unit test source 
 	{
+		std::string template_cpp_test;
+		FileRead(TEMPLATE_CPP_TEST, 	template_cpp_test);
+
 		StringReplaceAll(template_cpp_test, "$$KEH_BIND_PROGRAM$$", bindProgramName);
 		StringReplaceAll(template_cpp_test, "$$KEH_DATE$$", dateString);
 		StringReplaceAll(template_cpp_test, "$$KEH_CLASSNAME$$", className);
@@ -729,6 +724,9 @@ int main(int argc, char** argv) {
 
 	// generate java class source 
 	{
+		std::string template_java;
+		FileRead(TEMPLATE_JAVA, 		template_java);
+
 		StringReplaceAll(template_java, "$$KEH_BIND_PROGRAM$$", bindProgramName);
 		StringReplaceAll(template_java, "$$KEH_DATE$$", dateString);
 		StringReplaceAll(template_java, "$$KEH_JAVA_CLASSNAME$$", javaClassName);
@@ -769,6 +767,8 @@ int main(int argc, char** argv) {
 		result = ProcessExec( "./testbind" );
 		printf( "Result :\n%s\n", result.c_str());
 	}
+	
+	printf("Completed..\n");
 
 	return 0;
 }
