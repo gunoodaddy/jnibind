@@ -20,7 +20,7 @@ Also `jnibind` perform making test program and running it to verify that output 
 
 ## If new types exist in input file..
 
-If you have some user defined type(of typedef) in input header file, you must add your new type in `jnibind.l` file.
+If you have some user defined types(of typedef) in input header file, you must add your new types in `jnibind.l` file.
 
 see `DWORD` in jnibind.l 
 
