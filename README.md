@@ -17,7 +17,8 @@ jnibind's output files are
 you use these files to your androind project.
 
 Also `jnibind` perform making test program and running it to verify that output files are generated correctly.
-(by using dummy_jni.h, remove ndk-dependancy) 
+
+(by using `dummy_jni.h`, removed ndk-dependancy) 
 
 ## If new types exist in input file..
 
