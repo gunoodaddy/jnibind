@@ -3,8 +3,6 @@
 
 c language parse tool : `flex`, `bison`
 
-Just modify template file for new binding class form. (in `./template`)
-
 ## Usage
 
 `jnibind` \<input header file\> \<bind name\>
