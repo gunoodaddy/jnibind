@@ -20,6 +20,11 @@ Also `jnibind` perform making test program and running it to verify that output 
 
 see `(Autmatically generated) Cpp Test file` in this document.
 
+## Requirement
+
+[flex](http://flex.sourceforge.net/)
+[bison](http://www.gnu.org/software/bison/)
+
 ## If new types exist in input file..
 
 If you have some user defined types(of typedef) in input header file, you must add your new types in `jnibind.l` file.
