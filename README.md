@@ -25,6 +25,23 @@ If you have some user defined type(of typedef) in input header file, you must ad
 see `DWORD` in jnibind.l 
 
 
+## How to use Bind<name> Class
+
+Here is a sample code..
+
+	SAMPLE_DATA data;
+	data.nID = 1;
+	// ... assignment
+	
+	CBindSample *bindobj = new CBindSample(jniEnv, NULL, &data);
+	bindobj->makeObject();
+    	
+	// Toss to java by JVM
+	// ...
+    	
+	delete bindobj;
+    	
+    	
 ## Sample
 
 ###	Input file
@@ -285,21 +302,6 @@ see `DWORD` in jnibind.l
 	}
 
 
-## How to use Bind<name> Class
-
-Here is a sample code..
-
-	SAMPLE_DATA data;
-	data.nID = 1;
-	// ... assignment
-	
-	CBindSample *bindobj = new CBindSample(jniEnv, NULL, &data);
-    	bindobj->makeObject();
-    	
-    	// Toss to java by JVM
-    	// ...
-    	
-    	delete bindobj;
 	
 
 
