@@ -18,7 +18,7 @@ you use these files to your androind project.
 
 Also `jnibind` perform making test program and running it to verify that output files are generated correctly.
 
-## If new type exists in input file..
+## If new types exist in input file..
 
 If you have some user defined type(of typedef) in input header file, you must add your new type in `jnibind.l` file.
 
