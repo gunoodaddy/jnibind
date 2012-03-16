@@ -7,8 +7,6 @@ c language parse tool : `flex`, `bison`
 
 `jnibind` \<input header file\> \<bind name\>
 
-If you have some user defined type(of typedef) in input header file, you must add your new type in jnibind.l file.
-
 jnibind's output files are 
 
 * Bind\<name\>.cpp
@@ -19,6 +17,13 @@ jnibind's output files are
 you use these files to your androind project.
 
 Also `jnibind` perform making test program and running it to verify that output files are generated correctly.
+
+## If new type exists in input file..
+
+If you have some user defined type(of typedef) in input header file, you must add your new type in `jnibind.l` file.
+
+see `DWORD` in jnibind.l 
+
 
 ## Sample
 
@@ -278,4 +283,23 @@ Also `jnibind` perform making test program and running it to verify that output 
 		public bool mobileUsageFlag;
 		public int profileImageCRC;
 	}
+
+
+## How to use Bind<name> Class
+
+Here is a sample code..
+
+	SAMPLE_DATA data;
+	data.nID = 1;
+	// ... assignment
+	
+	CBindSample *bindobj = new CBindSample(jniEnv, NULL, &data);
+    	bindobj->makeObject();
+    	
+    	// Toss to java by JVM
+    	// ...
+    	
+    	delete bindobj;
+	
+
 
