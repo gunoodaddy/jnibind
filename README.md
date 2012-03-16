@@ -18,7 +18,7 @@ just use these files for your androind project.
 
 Also `jnibind` perform making test program and running it to verify that output files are generated correctly. (by using `dummy_jni.h`, removed ndk-dependancy) 
 
-see `(Autmatically generated) Cpp Test file`
+see `(Autmatically generated) Cpp Test file` in this document.
 
 ## If new types exist in input file..
 
