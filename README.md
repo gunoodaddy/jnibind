@@ -14,7 +14,7 @@ jnibind's output files are
 * Bind\<name\>.java
 * Bind\<name\>_test.cpp
 
-you just use these files to your androind project.
+just use these files to your androind project.
 
 Also `jnibind` perform making test program and running it to verify that output files are generated correctly. (by using `dummy_jni.h`, removed ndk-dependancy) 
 
