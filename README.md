@@ -42,9 +42,9 @@ Here is a sample code..
 	// ... assignment
 	
 	CBindSample *bindobj = new CBindSample(jniEnv, NULL, &data);
-	bindobj->makeObject();
+	jobject obj = bindobj->makeObject();
     	
-	// Toss to java by JVM
+	// Toss obj to java by JVM
 	// ...
     	
 	delete bindobj;
